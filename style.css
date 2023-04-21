@@ -1,0 +1,118 @@
+.icon-container {
+  position: relative;
+  width: 25%;
+  left: 25px;
+  top: 25px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+
+.encriptor-section {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+
+.decryptor-section{
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 100%;
+}
+
+textarea {
+  font-size: 16px;
+  margin-top: 20px;
+  padding-top: 16px;
+  padding-left: 10px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  resize: none;
+  border-radius: 10px;
+}
+
+.encriptor-textarea {
+  height: 450px;
+  outline: none;
+}
+
+.decryptor-textarea {
+  height: 450px;
+  outline: none;
+}
+
+textarea::placeholder {
+  color: black;
+  font-size: 24px;
+}
+
+.encriptor-input,
+.decryptor-input {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+
+button {
+  padding: 10px 30px;
+  border: 1px solid darkblue;
+  width: 30%;
+  border-radius: 30px;
+  font-size: 16px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 5px;
+}
+
+.encriptor-button {
+  color: white;
+  background-color: darkblue;
+}
+
+.decryptor-button,
+.clean-button {
+  background-color: #d8dfe8;
+  color: #0a3871;
+}
+
+.encriptor-button:hover {
+  background-color: #105dbd;
+  font-size: 17px;
+}
+.decryptor-button:hover {
+  background-color: #7aaae8;
+  font-size: 17px;
+}
+.clean-button:hover {
+  background-color: #7aaae8;
+  font-size: 17px;
+}
+
+.copy-button{
+    margin: 5px 40%;
+}
+
+footer {
+  font-size: 14px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin: none;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  background-color: #136fe3;
+}
+
+.icon {
+  width: 50px;
+}
