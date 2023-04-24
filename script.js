@@ -21,6 +21,7 @@ function encriptText(palabra) {
   encriptedText = encriptedText.replace(/a/g, "ai");
   encriptedText = encriptedText.replace(/o/g, "ober");
   encriptedText = encriptedText.replace(/u/g, "ufat");
+  encriptedText = encriptedText.replace(/[!@#$%^&*()?":{}|<>]/g, " ");
   decryptorTextarea.value = encriptedText;
   encriptTextarea.value = "";
 }
@@ -37,6 +38,7 @@ function decryptText(palabra) {
   decryptedText = decryptedText.replace(/ai/g, "a");
   decryptedText = decryptedText.replace(/ober/g, "o");
   decryptedText = decryptedText.replace(/ufat/g, "u");
+  decryptedText = decryptedText.replace(/[!@#$%^&*()?":{}|<>]/g, " ");
   decryptorTextarea.value = decryptedText;
 }
 
@@ -52,21 +54,12 @@ function clearTextAreas() {
   decryptorTextarea.value = "";
 }
 
-function validator() {
-  const notAllowed = /[!@#$%^&*(),.?":{}|<>]/g;
-  if (notAllowed.test(encriptTextarea.value)) {
-    alert("The textarea cannot contain special characters!");
-    encriptTextarea.value = "";
-  }
-}
 
 encriptButton.addEventListener("click", () => {
-  validator()
   encriptedText = encriptTextarea.value;
   encriptText(encriptedText.toLowerCase());
 });
 decryptButton.addEventListener("click", () => {
-  validator()
   decryptedText = encriptTextarea.value;
   decryptText(decryptedText.toLowerCase());
 });
