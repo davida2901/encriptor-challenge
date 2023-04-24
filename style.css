@@ -10,6 +10,7 @@
   justify-content: space-evenly;
   width: 100%;
   height: 100%;
+
 }
 
 .encriptor-section {
@@ -37,15 +38,11 @@ textarea {
   border-radius: 10px;
 }
 
-.encriptor-textarea {
+.encriptor-textarea,.decryptor-textarea {
   height: 450px;
   outline: none;
 }
 
-.decryptor-textarea {
-  height: 450px;
-  outline: none;
-}
 
 textarea::placeholder {
   color: black;

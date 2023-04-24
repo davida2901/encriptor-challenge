@@ -41,23 +41,33 @@ function decryptText(palabra) {
 }
 
 function copyDecryptedText() {
-    decryptorTextarea.select();
-    document.execCommand("copy");
-    alert("Text copied in the clipboard")
-    decryptorTextarea.value = ""
-  }
+  decryptorTextarea.select();
+  document.execCommand("copy");
+  alert("Text copied in the clipboard");
+  decryptorTextarea.value = "";
+}
 
 function clearTextAreas() {
   encriptTextarea.value = "";
   decryptorTextarea.value = "";
 }
 
+function validator() {
+  const notAllowed = /[!@#$%^&*(),.?":{}|<>]/g;
+  if (notAllowed.test(encriptTextarea.value)) {
+    alert("The textarea cannot contain special characters!");
+    encriptTextarea.value = "";
+  }
+}
+
 encriptButton.addEventListener("click", () => {
+  validator()
   encriptedText = encriptTextarea.value;
   encriptText(encriptedText.toLowerCase());
 });
 decryptButton.addEventListener("click", () => {
-  decryptedText = decryptorTextarea.value;
+  validator()
+  decryptedText = encriptTextarea.value;
   decryptText(decryptedText.toLowerCase());
 });
 
