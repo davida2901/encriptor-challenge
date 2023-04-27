@@ -76,7 +76,8 @@ button {
 }
 
 .decryptor-button,
-.clean-button {
+.clean-button,
+.copy-button {
   background-color: #d8dfe8;
   color: #0a3871;
 }
@@ -93,6 +94,10 @@ button {
   background-color: #7aaae8;
   font-size: 17px;
 }
+.copy-button:hover {
+  background-color: #7aaae8;
+  font-size: 17px;
+}
 
 .copy-button{
     margin: 5px 40%;
@@ -100,7 +105,7 @@ button {
 
 footer {
   font-size: 14px;
-  position: fixed;
+  position: absolute;
   left: 0;
   bottom: 0;
   margin: none;
@@ -113,3 +118,5 @@ footer {
 .icon {
   width: 50px;
 }
+
+
